@@ -1,0 +1,149 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+body{
+    
+    font-family:"poppins" , sans-serif;
+    background-color:rgba(72, 163, 0, 0.07);
+}
+main{
+    padding:0 1.2rem 2rem 1.2rem;
+}
+.header{
+    text-align:center;
+    color:#48a300;
+    font-size:4em;
+    margin-block: 3rem;
+}
+.header span{
+    color:#61481c;
+}
+.app-container{
+    max-width:660px;
+    background-color:#fbfbfb;
+    margin-inline:auto;
+    border-radius:1em;
+    box-shadow:0 0 8px 0px rgb(0 0 0 / 10%);
+    padding:4em 3em 1em 3em;
+}
+.sun-container{
+    position:relative;
+}
+.sun-body{
+    position:absolute;
+    top: -42px;
+    left: 90px;
+}
+.sun-body img{
+    animation: spin 3s linear infinite; 
+}
+@keyframes spin{
+    to { transform: rotate(360deg); }
+}
+.sun-face{
+    position:absolute;
+    top: -27px;
+    left: 112px;
+}
+.progress-label{
+    font-size: 14px;
+    color: #858585;
+    margin:28px 0 12px 0;
+}
+.progress-bar{
+    height: 30px;
+    background-color: rgba(72, 163, 0, 0.1);
+    border-radius:1em;
+}
+.progress-bar-filler{
+    height:100%;
+    width:10%;
+    background-color: rgba(72, 163, 0 );
+    border-radius:1em;
+    transition:width 0.3s ease-in-out;
+}
+.error-msg{
+    font-size: 12px;
+    color: #ff5151;
+    margin-block:3em 0.5em;
+}
+.show-error{
+    visibility:hidden;
+}
+.goal-container{
+    height:72px;
+    background-color:#ffffff;
+    border-radius:1em;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display:flex;
+    align-items:center;
+    padding-inline: 1.5em ;
+    margin-bottom:1.2rem;
+}
+.checkbox{
+    width: 24px;
+    height: 24px;
+    border: 2px solid rgba(97, 72, 28, 0.3);
+    border-radius: 50%;
+    flex-shrink:0;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.tick-icon{
+    display:none;
+}
+.completed .checkbox .tick-icon {
+    display:inline;
+}
+
+.completed .checkbox{
+    background: #48A300;
+    border-color: #48A300;
+}
+.completed .goal-input{
+    color:#48a300;
+    text-decoration-line:line-through;
+}
+.goal-input{
+    border:none;
+    outline:none;
+    padding-left:1.5em;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    align-self:stretch;
+    width:100%;
+}
+.goal-input::placeholder{
+    color:rgba(133, 133, 133, 0.5);
+}
+.quote{
+    text-align:center;
+    font-weight:500;
+    margin-top:2em;
+}
+.made-with{
+    text-align:center;
+    color: #858585;
+    font-weight:500;
+    font-size:12px;
+   margin-top:4em;
+}
+@media(max-width:768px){
+    .header{
+        font-size:2em;
+        margin-block: 2rem;
+    }
+    .app-container{
+        padding:3em 2em 1em 2em;
+    }
+    .progress-bar{
+        height: 24px;
+    }
+    .goal-container{
+        height:64px;
+        margin-bottom:0.8em;
+    }
+}
